@@ -1,3 +1,4 @@
+---
 kind: pipeline
 name: greeting
 
@@ -5,17 +6,14 @@ steps:
 - name: en
   image: alpine
   commands:
-  - echo hello
-  - echo world
+  - exit 1
 
-- name: es
+---
+kind: pipeline
+name: greeting2
+
+steps:
+- name: en
   image: alpine
   commands:
-  - echo hola
-  - echo mundo
-
-- name: fr
-  image: alpine
-  commands:
-  - echo bonjour
-  - echo monde
+  - exit 0
